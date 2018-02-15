@@ -5,7 +5,6 @@
 
 import Foundation
 import Charts
-import SwiftyJSON
 
 class RNYAxisChartViewBase: RNChartViewBase {
     func setYAxis(_ config: NSDictionary) {

@@ -3,7 +3,6 @@
 //
 
 import Charts
-import SwiftyJSON
 
 class RNHorizontalBarChartView: RNBarChartViewBase {
 

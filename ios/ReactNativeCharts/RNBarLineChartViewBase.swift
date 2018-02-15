@@ -5,7 +5,6 @@
 
 import Foundation
 import Charts
-import SwiftyJSON
 
 class RNBarLineChartViewBase: RNYAxisChartViewBase {
     fileprivate var barLineChart: BarLineChartViewBase {

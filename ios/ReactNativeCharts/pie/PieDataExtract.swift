@@ -4,7 +4,6 @@
 
 import Foundation
 
-import SwiftyJSON
 import Charts
 
 class PieDataExtract : DataExtract {

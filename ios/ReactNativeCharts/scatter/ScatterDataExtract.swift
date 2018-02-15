@@ -8,7 +8,6 @@
 
 import Foundation
 
-import SwiftyJSON
 import Charts
 
 class ScatterDataExtract : DataExtract {

@@ -8,7 +8,6 @@
 
 import UIKit
 import Charts
-import SwiftyJSON
 
 
 class ChartDataSetConfigUtils: NSObject {
