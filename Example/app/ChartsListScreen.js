@@ -8,7 +8,8 @@ import {
   Text,
 } from 'react-native';
 
-import {StackNavigator, SafeAreaView} from 'react-navigation';
+import {createAppContainer, SafeAreaView} from 'react-navigation';
+import {createStackNavigator } from 'react-navigation-stack';
 
 import AxisLineChartScreen from './AxisLineChartScreen';
 import MultipleChartScreen from './MultipleChartScreen';
@@ -19,6 +20,7 @@ import BubbleChartScreen from './BubbleChartScreen';
 import CandleStickChartScreen from './CandleStickChartScreen';
 import CombinedChartScreen from './CombinedChartScreen';
 import LineChartScreen from './LineChartScreen';
+import LineChartGradientScreen from './LineChartGradientScreen';
 import TimeSeriesLineChartScreen from './TimeSeriesLineChartScreen';
 import PieChartScreen from './PieChartScreen';
 import RadarChartScreen from './RadarChartScreen';
@@ -27,6 +29,9 @@ import StackedBarChartScreen from './StackedBarChartScreen';
 import ZeroLineChartScreen from './ZeroLineChartScreen';
 import LiveUpdateChartScreen from './LiveUpdateChartScreen';
 import GroupBarChartScreen from './GroupBarChartScreen';
+import InfiniteScrollLineChartScreen from './InfiniteScrollLineChartScreen';
+import LinkageChartScreen from './LinkageChartScreen';
+import StockChartScreen from './StockChartScreen';
 
 
 const styles = StyleSheet.create({
@@ -76,6 +81,11 @@ var ExampleRoutes = {
     screen: LineChartScreen,
     description: 'Displays a LineChart',
   },
+  LineChartGradientScreen: {
+    name: 'LineChartGradient',
+    screen: LineChartGradientScreen,
+    description: 'Displays a LineChart with Gradient',
+  },
   RadarChartScreen: {
     name: 'RadarChart',
     screen: RadarChartScreen,
@@ -95,6 +105,11 @@ var ExampleRoutes = {
     name: 'CandleStickChart',
     screen: CandleStickChartScreen,
     description: 'Displays a CandleStickChart',
+  },
+  StockChartScreen: {
+    name: 'StockChartScreen',
+    screen: StockChartScreen,
+    description: 'Displays a StockChartScreen',
   },
   TimeSeriesLineChartScreen: {
     name: 'TimeSeriesLineChart',
@@ -141,6 +156,16 @@ var ExampleRoutes = {
     screen: MovingWindowChartScreen,
     description: 'Displays a MovingWindowChartScreen',
   },
+  InfiniteScrollLineChartScreen: {
+    name: 'InfiniteScrollLineChartScreen',
+    screen: InfiniteScrollLineChartScreen,
+    description: 'Displays a InfiniteScrollChartScreen',
+  },
+  LinkageChartScreen: {
+    name: 'LinkageChartScreen',
+    screen: LinkageChartScreen,
+    description: 'Displays a LinkageChartScreen',
+  },
 };
 
 const MainScreen = ({navigation}) => (
@@ -176,7 +201,7 @@ MainScreen.navigationOptions = {
   title: 'Home',
 };
 
-const ChartsExplorer = StackNavigator(
+const ChartsExplorer = createStackNavigator(
   {
     Index: {
       screen: MainScreen,
@@ -197,4 +222,4 @@ const ChartsExplorer = StackNavigator(
   },
 );
 
-export default ChartsExplorer;
+export default createAppContainer(ChartsExplorer);
