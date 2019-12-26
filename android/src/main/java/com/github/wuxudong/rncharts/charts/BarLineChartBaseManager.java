@@ -83,6 +83,11 @@ public abstract class BarLineChartBaseManager<T extends BarLineChartBase, U exte
         chart.setGridBackgroundColor(color);
     }
 
+    @ReactProp(name = "maximumScaleX")
+    public void setMaximumScaleX(BarLineChartBase chart, Integer scale) {
+        chart.getViewPortHandler().setMaximumScaleX(scale);
+    }
+
     @ReactProp(name = "drawBorders")
     public void setDrawBorders(BarLineChartBase chart, boolean enabled) {
         chart.setDrawBorders(enabled);
