@@ -5,6 +5,7 @@
 
 import Foundation
 import Charts
+import SwiftyJSON
 
 class RNBarLineChartViewBase: RNYAxisChartViewBase {
     fileprivate var barLineChart: BarLineChartViewBase {
@@ -178,6 +179,10 @@ class RNBarLineChartViewBase: RNYAxisChartViewBase {
         let bottom = json["bottom"].double != nil ? CGFloat(json["bottom"].doubleValue) : 0
     
         barLineChart.setExtraOffsets(left: left, top: top, right: right, bottom: bottom)
+    }
+    
+    func setAxisScaleProfile(_ config: NSDictionary) {
+        fatalError("extraZoomProfile is not implemented in BarLineChart")
     }
     
     override func onAfterDataSetChanged() {

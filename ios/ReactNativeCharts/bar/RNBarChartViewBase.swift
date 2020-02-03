@@ -3,6 +3,7 @@
 //
 
 import Charts
+import SwiftyJSON
 
 class RNBarChartViewBase: RNBarLineChartViewBase {
 

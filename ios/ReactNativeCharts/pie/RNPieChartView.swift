@@ -3,6 +3,7 @@
 //
 
 import Charts
+import SwiftyJSON
 
 class RNPieChartView: RNChartViewBase {
     let _chart: PieChartView;
