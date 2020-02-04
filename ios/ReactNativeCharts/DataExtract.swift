@@ -4,6 +4,7 @@
 
 import Foundation
 import Charts
+import SwiftyJSON
 
 open class DataExtract {
     func extract(_ data: JSON) -> ChartData?  {

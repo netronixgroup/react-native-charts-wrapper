@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 import Charts
 
 class CandleDataExtract : DataExtract {
